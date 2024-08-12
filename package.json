@@ -1,0 +1,43 @@
+{
+  "name": "@beanc16/utility-types",
+  "version": "1.0.0",
+  "description": "Utility types for TypeScript.",
+  "author": {
+    "name": "beanc16",
+    "url": "https://github.com/beanc16"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "lint": "npx eslint . --ext .ts",
+    "lint-src": "npx eslint ./src --ext .ts",
+    "test": "",
+    "test-dev": "npx ts-node src/__tests__/manual/index.ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beanc16/utility-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beanc16/utility-types/issues"
+  },
+  "homepage": "https://github.com/beanc16/utility-types#readme",
+  "files": [
+    "dist/**/*"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.7.0",
+    "typescript": "^5.5.4"
+  }
+}
