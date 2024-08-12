@@ -1,2 +1,2 @@
-export * from './NonOptional.js';
-export * from './Optional.js';
+export type * from './NonOptional.js';
+export type * from './Optional.js';
