@@ -51,7 +51,7 @@ jobs:
           args:
             '✅ {{ EVENT_PAYLOAD.repository.full_name }} successfully published v${{ needs.publish-npm-package-to-gpr.outputs.package-version }}'
       - name: Notify Discord on Failure
-        if: failure() 
+        if: failure()
         uses: Ilshidur/action-discord@0.3.2
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_NOTIFICATION_WEBHOOK }}
